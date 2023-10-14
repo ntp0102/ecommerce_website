@@ -21,7 +21,7 @@ class Product(models.Model):
     _id = models.AutoField(primary_key=True, editable=False)
 
     def __str__(self):
-        return self.name + " | "+self.brand + " | " + str(self.price)
+        return self.name + " | " +self.brand + " | " + str(self.price)
 
 
 class Review(models.Model):
@@ -34,7 +34,7 @@ class Review(models.Model):
     _id = models.AutoField(primary_key=True, editable=False)
 
     def __str__(self):
-        return str(self.rating)
+        return self.product.name + ' --- ' + str(self.user.first_name) + ' --- ' + str(self.rating)
 
 
 class Order(models.Model):
@@ -55,7 +55,7 @@ class Order(models.Model):
     _id = models.AutoField(primary_key=True, editable=False)
 
     def __str__(self):
-        return str(self.createdAt)
+        return str(self.createdAt) 
 
 
 class OrderItem(models.Model):

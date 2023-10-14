@@ -10,7 +10,7 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework.response import Response
 from rest_framework.serializers import Serializer
-
+import django
 
 # Local Import
 # from base.products import products
@@ -25,7 +25,6 @@ from api.serializers import ProductSerializer, OrderSerializer
 def addOrderItems(request):
     user = request.user
     data = request.data
-    print(data)
     orderItems = data['orderItems']
 
     if orderItems and len(orderItems) == 0:
@@ -80,6 +79,7 @@ def addOrderItems(request):
 def getMyOrders(request):
     user = request.user
     orders = user.order_set.all()
+
     serializer = OrderSerializer(orders, many=True)
     return Response(serializer.data)
 
@@ -92,11 +92,12 @@ def getOrderById(request, pk):
 
     try:
         order = Order.objects.get(_id=pk)
+
         if order.user == user:
             serializer = OrderSerializer(order, many=False)
             return Response(serializer.data)
         else:
-            Response({'detail': 'Not Authorized  to view this order'},
+            return Response({'detail': 'Not Authorized  to view this order'},
                      status=status.HTTP_400_BAD_REQUEST)
     except:
         return Response({'detail': 'Order does not exist'}, status=status.HTTP_400_BAD_REQUEST)

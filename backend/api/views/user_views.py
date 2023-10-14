@@ -36,7 +36,7 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
 
         # Add custom claims
         token['username'] = user.username
-        token['message'] = "Hello NTP S hop"
+        token['message'] = "Hello NTP Shop"
         # ...
 
         return token

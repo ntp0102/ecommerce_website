@@ -41,19 +41,19 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api.apps.ApiConfig',
-    #3rd party apps
+    # 3rd party apps
     'rest_framework',
     'corsheaders',
 ]
 
-#simple JWT
+# simple JWT
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
 
-SIMPLE_JWT  = {
+SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=2000),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1500),
     'ROTATE_REFRESH_TOKENS': False,
@@ -104,7 +104,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000'
+]
+
 ROOT_URLCONF = 'backend.urls'
+
 
 TEMPLATES = [
     {
