@@ -15,12 +15,12 @@ import { useParams } from "react-router-dom";
 function HomeScreen({ history }) {
     const dispatch = useDispatch();
     const productList = useSelector((state) => state.product.productList);
-    const topRatedProducts = useSelector((state) => state.product.topRatedProducts);
+    // const topRatedProducts = useSelector((state) => state.product.topRatedProducts);
 
     const { products, loading, error, page, pages } = productList;
     const { pageNumber } = useParams()
     // const { products: topProducts, loading: topLoading, error: topError } = topRatedProducts;
-    const { topProducts, topLoading, topError } = topRatedProducts;
+    // const { topProducts, topLoading, topError } = topRatedProducts;
 
     let keyword = history.location.search;
 

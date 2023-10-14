@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { Row, Col, ListGroup, Image, Card, Button } from "react-bootstrap";
 
 /* PAYPAL BUTTONS */
-import { PayPalButton } from "react-paypal-button-v2";
+// import { PayPalButton } from "react-paypal-button-v2";
 
 /* COMPONENTS */
 import Message from "../components/Message";
