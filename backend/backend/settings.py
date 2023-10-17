@@ -109,7 +109,7 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
-    os.environ.get("FRONTEND_URL")
+    # os.environ.get("FRONTEND_URL")
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -189,7 +189,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_DIRS = [
     BASE_DIR/'static',
 ]
