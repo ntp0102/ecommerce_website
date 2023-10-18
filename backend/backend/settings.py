@@ -27,10 +27,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
+# DEBUG = False
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
-# ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['localhost']
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 
 
@@ -105,6 +105,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',       # add whitenoise middleware
 ]
 
 CORS_ORIGIN_WHITELIST = [
@@ -143,9 +144,8 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 database_url = os.environ.get("DATABASE_URL")
-# DATABASES['default'] = dj_database_url.parse(
-#     f'postgres://django_ecommerce_render_user:JGCnteYuafpFUafdoRI8Pc7RF0haIqap@dpg-ckn14611rp3c73f2dmjg-a.singapore-postgres.render.com/django_ecommerce_render')
 DATABASES['default'] = dj_database_url.parse(database_url)
 
 
