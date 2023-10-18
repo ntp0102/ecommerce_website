@@ -105,7 +105,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',       # add whitenoise middleware
+    'whitenoise.middleware.WhiteNoiseMiddleware',       # add whitenoise middleware | python manage.py collectstatic
 ]
 
 CORS_ORIGIN_WHITELIST = [
