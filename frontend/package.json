@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "homepage":"https://website-django-react.vercel.app/" ,
+  "homepage": ".",
   "private": true,
   "proxy": "https://django-ecommerce-render.onrender.com/",
   "dependencies": {
