@@ -23,7 +23,7 @@ function HomeScreen({ history }) {
     // const { topProducts, topLoading, topError } = topRatedProducts;
 
     let keyword = history.location.search;
-
+    console.log("products", products)
 
     useEffect(() => {
         dispatch(fetchProductList(keyword, pageNumber));
@@ -44,6 +44,8 @@ function HomeScreen({ history }) {
                 <Loader />
             ) : error ? (
                 <Message variant="danger">{error}</Message>
+            ) : !products ? (
+                <Loader />
             ) : (
                 <div>
                     <Row>
