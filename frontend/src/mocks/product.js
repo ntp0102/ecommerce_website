@@ -9,7 +9,7 @@ class ProductAPI {
                     page: pageNumber
                 }
             });
-
+            console.log('data',data)
             return data;
         } catch (error) {
             throw error.response && error.response.data.detail ? error.response.data.detail : error.message;

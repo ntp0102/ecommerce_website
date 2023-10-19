@@ -111,6 +111,7 @@ export const fetchProductList = (keyword, pageNumber = '') => async (dispatch) =
     try {
         dispatch(productListRequest());
         const productList = await productAPI.getProductList(keyword, pageNumber);
+        console.log('productList', productList)
         dispatch(productListSuccess(productList))
     } catch (error) {
         dispatch(productListFailure(error.response?.data.detail || error.message));
