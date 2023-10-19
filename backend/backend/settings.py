@@ -109,8 +109,9 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = [
-    # 'http://localhost:3000',
-    os.environ.get("FRONTEND_URL")
+    'http://localhost:3000',
+    'website-django-react.vercel.app',
+    # os.environ.get("FRONTEND_URL")
 ]
 
 ROOT_URLCONF = 'backend.urls'
