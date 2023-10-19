@@ -32,12 +32,12 @@ function HomeScreen({ history }) {
 
     return (
         <div>
-            {!keyword && (
+            {/* {!keyword && (
                 <>
                     <div style={{ fontWeight: "bold", fontSize: "25px", color: "black", fontFamily: "MozAnimationDelay" }}>TOP-RATED PRODUCTS</div>
                     <ProductCarousel />
                 </>
-            )}
+            )} */}
 
             <div style={{ fontWeight: "bold", fontSize: "25px", color: "black", fontFamily: "MozAnimationDelay" }}>LATEST PRODUCTS</div>
             {loading ? (
