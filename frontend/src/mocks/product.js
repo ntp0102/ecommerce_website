@@ -8,7 +8,7 @@ class ProductAPI {
                 params: {
                     page: pageNumber
                 }
-            });
+            },  {mode:'cors'});
 
             return data;
         } catch (error) {
