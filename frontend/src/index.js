@@ -20,9 +20,11 @@ import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js'
 // );
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <React>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React>,
   document.getElementById("root")
 );
 
