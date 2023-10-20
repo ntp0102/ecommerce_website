@@ -7,8 +7,9 @@ class ProductAPI {
             const { data } = await axios.get(`https://django-ecommerce-render.onrender.com/api/products${keyword}`, {
                 params: {
                     page: pageNumber
-                }
-            },  {mode:'cors'});
+                },
+                mode: "cors",
+            });
 
             return data;
         } catch (error) {
