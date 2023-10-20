@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "homepage": ".",
+  "homepage": "https://django-ecommerce-render.onrender.com",
   "private": true,
   "proxy": "https://django-ecommerce-render.onrender.com",
   "dependencies": {
