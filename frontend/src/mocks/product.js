@@ -4,18 +4,12 @@ import axios from 'axios';
 class ProductAPI {
     async getProductList(keyword = '', pageNumber = '') {
         try {
-            const config = {
-                headers: {
-                    'Content-type': 'application/json',
-                },
-            };
-            const { data } = await axios.get(`/api/products${keyword}`,
-                {
-                    params: {
-                        page: pageNumber
-                    }
-                }, config);
-            console.log('data', data)
+            const { data } = await axios.get(`/api/products${keyword}`, {
+                params: {
+                    page: pageNumber
+                }
+            });
+
             return data;
         } catch (error) {
             throw error.response && error.response.data.detail ? error.response.data.detail : error.message;
