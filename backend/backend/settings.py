@@ -34,7 +34,7 @@ DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
 # ALLOWED_HOSTS = ['localhost']
 CORS_ORIGIN_ALLOW_ALL = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 CORS_ALLOW_HEADERS = default_headers + (
     'Access-Control-Allow-Origin',
