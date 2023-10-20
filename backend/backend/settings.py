@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
 # ALLOWED_HOSTS = ['localhost']
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_ALL_ORIGINS = True
 ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 CORS_ALLOW_HEADERS = default_headers + (
