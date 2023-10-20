@@ -14,6 +14,8 @@ import os
 from pathlib import Path
 from datetime import timedelta
 import dj_database_url  # import database when deploying
+from corsheaders.defaults import default_headers
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -34,7 +36,9 @@ DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 CORS_ORIGIN_ALLOW_ALL = True
 ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
-
+CORS_ALLOW_HEADERS = default_headers + (
+    'Access-Control-Allow-Origin',
+)
 
 # Application definition
 
@@ -188,7 +192,7 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
+USE_L10N = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
