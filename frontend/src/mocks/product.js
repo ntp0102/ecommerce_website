@@ -4,7 +4,11 @@ import axios from 'axios';
 class ProductAPI {
     async getProductList(keyword = '', pageNumber = '') {
         try {
+            const headers = {
+                'Content-Type': 'application/json'
+            }
             const { data } = await axios.get(`/api/products${keyword}`, {
+                headers: headers,
                 params: {
                     page: pageNumber
                 },
