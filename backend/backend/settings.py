@@ -39,7 +39,7 @@ ALLOWED_HOSTS = ['*']
 CORS_ALLOW_HEADERS = default_headers + (
     'Access-Control-Allow-Origin',
 )
-CORS_ORIGIN_ALLOW_ALL = True
+
 
 # Application definition
 
