@@ -4,7 +4,7 @@ import axios from 'axios';
 class ProductAPI {
     async getProductList(keyword = '', pageNumber = '') {
         try {
-            const { data } = await axios.get(`/api/products${keyword}`, {
+            const { data } = await axios.get(`/api/products${keyword}?q=proxy`, {
                 params: {
                     page: pageNumber
                 },
