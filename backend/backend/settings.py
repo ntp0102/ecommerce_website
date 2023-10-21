@@ -34,7 +34,24 @@ DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
 # ALLOWED_HOSTS = ['localhost']
 CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ORIGIN_ALLOW_ALL = True
 ALLOWED_HOSTS = ['*']
+
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+    'http://localhost:8000',
+    'https://website-django-react.vercel.app/',
+    'https://django-ecommerce-render.onrender.com/',
+    # os.environ.get("FRONTEND_URL")
+]
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+    'http://localhost:8000',
+    'https://website-django-react.vercel.app/',
+    'https://django-ecommerce-render.onrender.com/',
+    # os.environ.get("FRONTEND_URL")
+]
 # ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 
 # Application definition
@@ -112,17 +129,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-# CORS_ORIGIN_WHITELIST = [
-#     'http://localhost:3000',
-#     'website-django-react.vercel.app',
-#     'https://website-django-react.vercel.app/',
-#     # os.environ.get("FRONTEND_URL")
-# ]
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
-    'website-django-react.vercel.app',
-    'https://website-django-react.vercel.app/',
-]
+
 
 ROOT_URLCONF = 'backend.urls'
 
