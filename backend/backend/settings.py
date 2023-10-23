@@ -33,7 +33,7 @@ DEBUG = False
 # DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
 
-ALLOWED_HOSTS = ['localhost', 'https://website-django-react.vercel.app']
+ALLOWED_HOSTS = ['localhost']
 
 # ALLOWED_HOSTS = ['*']
 # CORS_ALLOW_ALL_ORIGINS = True
@@ -157,8 +157,8 @@ DATABASES = {
     }
 }
 
-# database_url = os.environ.get("DATABASE_URL")
-# DATABASES['default'] = dj_database_url.parse(database_url)
+database_url = os.environ.get("DATABASE_URL")
+DATABASES['default'] = dj_database_url.parse(database_url)
 
 
 # Password validationdpg-ckn14611rp3c73f2dmjg-a
