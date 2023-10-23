@@ -32,11 +32,13 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # DEBUG = False
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
-# ALLOWED_HOSTS = ['localhost']
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = False
 
-CORS_ORIGIN_ALLOW_ALL = True
-ALLOWED_HOSTS = ['*']
+CORS_ORIGIN_ALLOW_ALL = False
+ALLOWED_HOSTS = ['localhost', 'https://website-django-react.vercel.app/']
+
+# ALLOWED_HOSTS = ['*']
+
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
@@ -71,7 +73,7 @@ CORS_ALLOW_METHODS = [
     "PATCH",
     "POST",
     "PUT",
-    "DELETE"   
+    "DELETE"
 ]
 
 # Application definition
@@ -148,7 +150,6 @@ MIDDLEWARE = [
     # add whitenoise middleware | python manage.py collectstatic
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
-
 
 
 ROOT_URLCONF = 'backend.urls'
