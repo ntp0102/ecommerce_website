@@ -35,7 +35,7 @@ DEBUG = False
 
 # ALLOWED_HOSTS = ['localhost']
 
-ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['*']
 # CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOWED_ORIGINS = [
@@ -46,7 +46,7 @@ CORS_ALLOWED_ORIGINS = [
     # os.environ.get("FRONTEND_URL")
 ]
 
-# ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 
 
 # Application definition
