@@ -32,9 +32,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # DEBUG = False
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
-CORS_ALLOW_ALL_ORIGINS = False
 
-ALLOWED_HOSTS = ['localhost', 'https://website-django-react.vercel.app/']
+# ALLOWED_HOSTS = ['localhost', 'https://website-django-react.vercel.app/']
 
 # ALLOWED_HOSTS = ['*']
 
@@ -46,25 +45,25 @@ CORS_ALLOWED_ORIGINS = [
     'https://django-ecommerce-render.onrender.com/',
     # os.environ.get("FRONTEND_URL")
 ]
-CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:3000',
-    'http://localhost:8000',
-    'https://website-django-react.vercel.app/',
-    'https://django-ecommerce-render.onrender.com/',
-    # os.environ.get("FRONTEND_URL")
-]
+# CSRF_TRUSTED_ORIGINS = [
+#     'http://localhost:3000',
+#     'http://localhost:8000',
+#     'https://website-django-react.vercel.app/',
+#     'https://django-ecommerce-render.onrender.com/',
+#     # os.environ.get("FRONTEND_URL")
+# ]
 # ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
-CORS_ALLOW_HEADERS = [
-    "accept",
-    "accept-encoding",
-    "authorization",
-    "content-type",
-    "dnt",
-    "origin",
-    "user-agent",
-    "x-csrftoken",
-    "x-requested-with",
-]
+# CORS_ALLOW_HEADERS = [
+#     "accept",
+#     "accept-encoding",
+#     "authorization",
+#     "content-type",
+#     "dnt",
+#     "origin",
+#     "user-agent",
+#     "x-csrftoken",
+#     "x-requested-with",
+# ]
 
 # Application definition
 
