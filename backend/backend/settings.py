@@ -41,8 +41,8 @@ DEBUG = False
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'http://localhost:8000',
-    'https://website-django-react.vercel.app',
-    'https://django-ecommerce-render.onrender.com',
+    'website-django-react-git-main-nguyenthienphuc261100-gmailcom.vercel.app',
+    'django-ecommerce-render.onrender.com',
     # os.environ.get("FRONTEND_URL")
 ]
 
