@@ -39,7 +39,7 @@ DEBUG = False
 # CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
+    # 'http://localhost:3000',
     'http://localhost:8000',
     'website-django-react-git-main-nguyenthienphuc261100-gmailcom.vercel.app',
     'django-ecommerce-render.onrender.com',
