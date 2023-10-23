@@ -33,25 +33,19 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
 
-# ALLOWED_HOSTS = ['localhost', 'https://website-django-react.vercel.app/']
+ALLOWED_HOSTS = ['localhost', 'https://website-django-react.vercel.app/']
 
 # ALLOWED_HOSTS = ['*']
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = False
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'http://localhost:8000',
-    'https://website-django-react.vercel.app/',
-    'https://django-ecommerce-render.onrender.com/',
+    'https://website-django-react.vercel.app',
+    'https://django-ecommerce-render.onrender.com',
     # os.environ.get("FRONTEND_URL")
 ]
-# CSRF_TRUSTED_ORIGINS = [
-#     'http://localhost:3000',
-#     'http://localhost:8000',
-#     'https://website-django-react.vercel.app/',
-#     'https://django-ecommerce-render.onrender.com/',
-#     # os.environ.get("FRONTEND_URL")
-# ]
+
 # ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 
 
