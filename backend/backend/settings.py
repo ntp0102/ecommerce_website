@@ -15,7 +15,8 @@ from pathlib import Path
 from datetime import timedelta
 import dj_database_url  # import database when deploying
 from corsheaders.defaults import default_headers
-
+from dotenv import load_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,8 +26,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-!c+651yr@%88v&!mrvsa9vmq8!7py4@f2nysaz##x+=s@vtg9$'
-# SECRET_KEY = os.environ.get("SECRET_KEY")
+# SECRET_KEY = 'django-insecure-!c+651yr@%88v&!mrvsa9vmq8!7py4@f2nysaz##x+=s@vtg9$'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -39,10 +40,10 @@ DEBUG = False
 # CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOWED_ORIGINS = [
-    # 'http://localhost:3000',
+    'http://localhost:3000',
     'http://localhost:8000',
-    'website-django-react-git-main-nguyenthienphuc261100-gmailcom.vercel.app',
-    'django-ecommerce-render.onrender.com',
+    'https://website-django-react.vercel.app',
+    'https://django-ecommerce-render.onrender.com',
     # os.environ.get("FRONTEND_URL")
 ]
 
