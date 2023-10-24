@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { json } from 'react-router';
 
 
 class ProductAPI {
@@ -14,7 +15,8 @@ class ProductAPI {
                     page: pageNumber
                 },
                 mode: "cors",
-            });
+            }); 
+            console.log('data get', JSON.stringify(data_get))
             console.log('data get', data_get)
             const { data } = data_get
             return data;
