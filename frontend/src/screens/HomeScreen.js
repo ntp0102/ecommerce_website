@@ -26,6 +26,7 @@ function HomeScreen({ history }) {
     console.log("products", products)
 
     useEffect(() => {
+        console.log('check to useEffect')
         dispatch(fetchProductList(keyword, pageNumber));
     }, [dispatch, keyword, pageNumber]);
 
