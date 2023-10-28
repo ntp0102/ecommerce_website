@@ -48,6 +48,9 @@ CORS_ALLOWED_ORIGINS = [
     'https://website-django-react-a11e.vercel.app',
     'https://reactjs-ecommerce-render.onrender.com',
     'https://render.com',
+    'http://13.228.225.19',
+    'http://18.142.128.26',
+    'http://54.254.162.138',
     # os.environ.get("FRONTEND_URL")
 ]
 
