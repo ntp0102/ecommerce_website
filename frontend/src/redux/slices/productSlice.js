@@ -110,6 +110,7 @@ export const {
 export const fetchProductList = (keyword, pageNumber = '') => async (dispatch) => {
     try {
         dispatch(productListRequest());
+        console.log(' check productList')
         const productList = await productAPI.getProductList(keyword, pageNumber);
         console.log('productList', productList)
         dispatch(productListSuccess(productList))
