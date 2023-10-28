@@ -6,15 +6,17 @@ class ProductAPI {
         try {
             const headers = {
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*', 
+                'Access-Control-Allow-Origin': '*',
             }
-            const { data } = await axios.get(`/api/products${keyword}`, {
+            const respsonse = await axios.get(`/api/products${keyword}`, {
                 headers: headers,
                 params: {
                     page: pageNumber
                 },
                 mode: "cors",
-            }); 
+            });
+            console.log('response', respsonse)
+            const { data } = respsonse
             return data;
         } catch (error) {
             throw error.response && error.response.data.detail ? error.response.data.detail : error.message;
