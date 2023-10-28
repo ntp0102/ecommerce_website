@@ -44,8 +44,6 @@ function HomeScreen({ history }) {
                 <Loader />
             ) : error ? (
                 <Message variant="danger">{error}</Message>
-            ) : !products ? (
-                <Loader />
             ) : (
                 <div>
                     <Row>
