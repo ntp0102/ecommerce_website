@@ -23,7 +23,6 @@ import OrderScreen from "./screens/OrderScreen";
 /* REACT ROUTER */
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Star from "./components/Star";
-import { redirect } from "react-router-dom";
 
 
 function App() {

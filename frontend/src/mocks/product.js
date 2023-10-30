@@ -5,8 +5,8 @@ class ProductAPI {
     async getProductList(keyword = '', pageNumber = '') {
         try {
             const headers = {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
+                'Accept': 'application/json',
+                "Content-Type": "application/json",
             }
             const respsonse = await axios.get(`/api/products${keyword}`, {
                 headers: headers,
