@@ -1,2 +1,2 @@
 # ecommerce_website
-![Hompage](main/frontend/public/Homepage.png)
+![Hompage](frontend/public/Homepage.png)
