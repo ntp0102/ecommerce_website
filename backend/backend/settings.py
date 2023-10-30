@@ -41,12 +41,12 @@ ALLOWED_HOSTS = ['*']
 CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOWED_ORIGINS = [
+    'https://reactjs-ecommerce-render.onrender.com',
     'http://localhost:3000',
     'http://localhost:8000',
     'https://website-django-react.vercel.app',
     'https://django-ecommerce-render.onrender.com',
     'https://website-django-react-a11e.vercel.app',
-    'https://reactjs-ecommerce-render.onrender.com',
     'https://render.com',
     'http://13.228.225.19',
     'http://18.142.128.26',
@@ -129,8 +129,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # add whitenoise middleware | python manage.py collectstatic
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    
+    'whitenoise.middleware.WhiteNoiseMiddleware', # add whitenoise middleware | python manage.py collectstatic
 ]
 
 
@@ -166,8 +166,8 @@ DATABASES = {
     }
 }
 
-database_url = os.environ.get("DATABASE_URL")
-DATABASES['default'] = dj_database_url.parse(database_url)
+# database_url = os.environ.get("DATABASE_URL")
+# DATABASES['default'] = dj_database_url.parse(database_url)
 
 
 # Password validationdpg-ckn14611rp3c73f2dmjg-a
