@@ -40,6 +40,7 @@ ALLOWED_HOSTS = ['*']
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
+    'https://website-django-react-git-main-nguyenthienphuc261100-gmailcom.vercel.app',
     'https://reactjs-ecommerce-render.onrender.com',
     'http://localhost:3000',
     'http://localhost:8000',
@@ -49,6 +50,7 @@ CORS_ALLOWED_ORIGINS = [
     # os.environ.get("FRONTEND_URL")
 ]
 CSRF_TRUSTED_ORIGINS = [
+    'https://website-django-react-git-main-nguyenthienphuc261100-gmailcom.vercel.app',
     'https://reactjs-ecommerce-render.onrender.com',
     'http://localhost:3000',
     'http://localhost:8000',
