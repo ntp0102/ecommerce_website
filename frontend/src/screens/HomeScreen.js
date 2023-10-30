@@ -23,22 +23,20 @@ function HomeScreen({ history }) {
     // const { topProducts, topLoading, topError } = topRatedProducts;
 
     let keyword = history.location.search;
-    console.log("products", products)
 
     useEffect(() => {
-        console.log('check to useEffect')
         dispatch(fetchProductList(keyword, pageNumber));
     }, [dispatch, keyword, pageNumber]);
 
 
     return (
         <div>
-            {/* {!keyword && (
+            {!keyword && (
                 <>
                     <div style={{ fontWeight: "bold", fontSize: "25px", color: "black", fontFamily: "MozAnimationDelay" }}>TOP-RATED PRODUCTS</div>
                     <ProductCarousel />
                 </>
-            )} */}
+            )}
 
             <div style={{ fontWeight: "bold", fontSize: "25px", color: "black", fontFamily: "MozAnimationDelay" }}>LATEST PRODUCTS</div>
             {loading ? (

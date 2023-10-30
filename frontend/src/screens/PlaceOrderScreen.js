@@ -1,12 +1,10 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import { Button, Row, Col, ListGroup, Image, Card } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { createOrder, getOrderDetails } from "../redux/slices/orderSlice";
+import { createOrder } from "../redux/slices/orderSlice";
 import CheckoutSteps from "../components/CheckoutSteps";
 import Message from "../components/Message";
-import { fetchUserDetails } from "../redux/slices/userSlice";
-import { current } from "@reduxjs/toolkit";
+
 import Swal from 'sweetalert2';
 
 

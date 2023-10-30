@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Row, Col, Image, ListGroup, Button, Card, Form } from "react-bootstrap";
+import React from "react";
+import { Row, Col, Image, ListGroup, Button, Card } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message";
 import { removeFromCart } from "../redux/slices/cartSlice";

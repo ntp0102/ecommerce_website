@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Card, CardActionArea, CardContent, CardMedia, Paper, Typography } from "@mui/material";
+import { CardActionArea, CardContent, CardMedia, Paper, Typography } from "@mui/material";
 import Rating from "./Rating";
 
 

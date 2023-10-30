@@ -3,7 +3,7 @@ import { Row, Col, Button, Form, Table } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteUser, updateUser } from "../redux/slices/userSlice";
-import { listMyOrders, getOrderDetails } from "../redux/slices/orderSlice";
+import { listMyOrders } from "../redux/slices/orderSlice";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 import CancelIcon from '@mui/icons-material/Cancel';
